@@ -1,0 +1,9 @@
+.buttons {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+.statistic {
+  list-style: none;
+  padding: 0;
+}
