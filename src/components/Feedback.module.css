@@ -1,9 +1,22 @@
+.container {
+  background-color: blanchedalmond;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.titles {
+  padding: 20px;
+  margin: 10px;
+}
 .buttons {
   width: 200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  padding: 20px;
 }
 .statistic {
   list-style: none;
-  padding: 0;
+  padding: 5px;
 }
