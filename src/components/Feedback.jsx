@@ -11,21 +11,27 @@ class Feedback extends Component {
         bad: 0
     }
 
-    goodSum = () => { 
-        this.setState(prevState => ({
-            good: prevState.good + 1
-        }));
-    };
+    // goodSum = () => { 
+    //     this.setState(prevState => ({
+    //         good: prevState.good + 1
+    //     }));
+    // };
 
-    neutralSum = () => { 
-        this.setState(prevState => ({
-            neutral: prevState.neutral + 1
-        }));
-    };
+    // neutralSum = () => { 
+    //     this.setState(prevState => ({
+    //         neutral: prevState.neutral + 1
+    //     }));
+    // };
 
-    badSum = () => { 
+    // badSum = () => { 
+    //     this.setState(prevState => ({
+    //         bad: prevState.bad + 1
+    //     }));
+    // };
+
+    setFeedback = feedback => {
         this.setState(prevState => ({
-            bad: prevState.bad + 1
+            [feedback]: prevState[feedback] + 1,
         }));
     };
 
@@ -38,15 +44,16 @@ class Feedback extends Component {
     };
 
     render() {
+       const objectKey = Object.keys(this.state)
+
         return (
             <div>
                 <Section title="Please leave feedback"
                 >
                     
                     <FeedbackOptions
-                        good={this.goodSum}
-                        neutral={this.neutralSum}
-                        bad={this.badSum}
+                        options={objectKey}
+                        onLeaveFeedback={this.setFeedback}
                     />
                 </Section>  
                 <Section title="Statistic">
